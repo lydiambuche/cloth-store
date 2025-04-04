@@ -1,0 +1,101 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a href="C:\Users\Lydia\Desktop\cloth store website\index1.html">LUXE COUTURE</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html" class="active">Home</a></li>  
+            <li><a href="about.html">About</a></li>  
+            <li><a href="new-arrivals.html">New arrivals</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .navbar {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+    }
+
+    .navbar .container {
+        display: flex;
+        justify-content: space-evenly; 
+        align-items: center;
+    }
+
+    .navbar .logo a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .navbar .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .navbar .nav-links li {
+        display: inline;
+    }
+
+    .navbar .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+    .navbar .nav-links a:hover,
+    .navbar .nav-links a.active {
+        color: #f4a261;
+    }
+
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+    }
+
+    .menu-toggle i {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar .nav-links {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            width: 200px;
+            border-radius: 5px;
+        }
+
+        .navbar .nav-links.active {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }
+</style>
+
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>

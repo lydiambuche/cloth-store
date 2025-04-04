@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Self-Service Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Screen -->
+        <div id="login-screen" class="screen active">
+            <div class="login-container">
+                <h1>Employee Portal</h1>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Employee Name</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password (5 digits)</label>
+                        <input type="password" id="password" pattern="\d{5}" title="5-digit number" required>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <button type="button" id="change-password-btn" class="btn secondary">Change Password</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Change Password Modal -->
+        <div id="change-password-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Change Password</h2>
+                <form id="change-password-form">
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-password">New Password (5 digits)</label>
+                        <input type="password" id="new-password" pattern="\d{5}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    <button type="submit" class="btn">Update Password</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main Dashboard -->
+        <div id="dashboard" class="screen">
+            <header>
+                <div class="user-info">
+                    <span id="welcome-message"></span>
+                    <button id="logout-btn" class="btn secondary">Logout</button>
+                </div>
+            </header>
+
+            <div class="dashboard-container">
+                <nav class="sidebar">
+                    <ul>
+                        <li class="active" data-section="personal-info"><i class="fas fa-user"></i> Personal Info</li>
+                        <li data-section="leave-management"><i class="fas fa-calendar-alt"></i> Leave Management</li>
+                        <li data-section="payroll"><i class="fas fa-money-bill-wave"></i> Payroll</li>
+                        <li data-section="documents"><i class="fas fa-file-alt"></i> Documents</li>
+                    </ul>
+                </nav>
+
+                <main class="content-area">
+                    <!-- Personal Information Section -->
+                    <section id="personal-info" class="content-section active">
+                        <h2>Personal Information</h2>
+                        <form id="personal-info-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="chat-name">Chat Name</label>
+                                    <input type="text" id="chat-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="day-id">Day ID Number</label>
+                                    <input type="text" id="day-id">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="concise">Concise Summary</label>
+                                <textarea id="concise" rows="3"></textarea>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="relationship">Relationship Status</label>
+                                    <select id="relationship">
+                                        <option value="single">Single</option>
+                                        <option value="married">Married</option>
+                                        <option value="divorced">Divorced</option>
+                                        <option value="widowed">Widowed</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" id="dob">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="join-date">Date of Joining</label>
+                                    <input type="date" id="join-date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="position">Position</label>
+                                    <input type="text" id="position">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="next-of-kin">Next of Kin</label>
+                                <input type="text" id="next-of-kin">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="kin-number">Next of Kin Contact Number</label>
+                                <input type="tel" id="kin-number">
+                            </div>
+                            
+                            <button type="submit" class="btn">Update Information</button>
+                        </form>
+                    </section>
+
+                    <!-- Leave Management Section -->
+                    <section id="leave-management" class="content-section">
+                        <h2>Leave Management</h2>
+                        
+                        <div class="leave-balance">
+                            <h3>Your Leave Balance</h3>
+                            <div class="balance-cards">
+                                <div class="balance-card">
+                                    <span class="balance-type">Annual Leave</span>
+                                    <span class="balance-days">15 days</span>
+                                </div>
+                                <div class="balance-card">
+                                    <span class="balance-type">Sick Leave</span>
+                                    <span class="balance-days">10 days</span>
+                                </div>
+                                <div class="balance-card">
+                                    <span class="balance-type">Personal Leave</span>
+                                    <span class="balance-days">5 days</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="apply-leave">
+                            <h3>Apply for Leave</h3>
+                            <form id="leave-application-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="leave-type">Leave Type</label>
+                                        <select id="leave-type">
+                                            <option value="annual">Annual Leave</option>
+                                            <option value="sick">Sick Leave</option>
+                                            <option value="personal">Personal Leave</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="leave-days">Days Requested</label>
+                                        <input type="number" id="leave-days" min="1">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="start-date">Start Date</label>
+                                        <input type="date" id="start-date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="end-date">End Date</label>
+                                        <input type="date" id="end-date">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="leave-reason">Reason</label>
+                                    <textarea id="leave-reason" rows="3"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn">Submit Application</button>
+                            </form>
+                        </div>
+                        
+                        <div class="leave-history">
+                            <h3>Leave History</h3>
+                            <table id="leave-history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Leave #</th>
+                                        <th>Type</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Days</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Payroll Section -->
+                    <section id="payroll" class="content-section">
+                        <h2>Payroll Information</h2>
+                        
+                        <div class="payroll-overview">
+                            <h3>Current Pay Period</h3>
+                            <div class="payroll-card">
+                                <div class="payroll-item">
+                                    <span class="payroll-label">Gross Pay:</span>
+                                    <span class="payroll-value" id="gross-pay">$0.00</span>
+                                </div>
+                                <div class="payroll-item">
+                                    <span class="payroll-label">Taxes:</span>
+                                    <span class="payroll-value" id="taxes">$0.00</span>
+                                </div>
+                                <div class="payroll-item">
+                                    <span class="payroll-label">Deductions:</span>
+                                    <span class="payroll-value" id="deductions">$0.00</span>
+                                </div>
+                                <div class="payroll-item total">
+                                    <span class="payroll-label">Net Pay:</span>
+                                    <span class="payroll-value" id="net-pay">$0.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="payroll-history">
+                            <h3>Payroll History</h3>
+                            <table id="payroll-history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Pay Period</th>
+                                        <th>Gross Pay</th>
+                                        <th>Net Pay</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Will be populated by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Documents Section -->
+                    <section id="documents" class="content-section">
+                        <h2>Company Documents</h2>
+                        
+                        <div class="document-categories">
+                            <div class="category">
+                                <h3><i class="fas fa-file-contract"></i> Employment Contracts</h3>
+                                <ul class="document-list">
+                                    <li>
+                                        <span>Employment Agreement.pdf</span>
+                                        <button class="btn small"><i class="fas fa-download"></i> Download
