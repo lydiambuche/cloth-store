@@ -1,18 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Arrivals - LUXE COUTURE</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Arrivals - LUXE COUTURE ARRIVALS</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+   <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #f7f7f7;
+    padding: 20px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+header .logo h1 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+header .logo span {
+    color: gold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #111;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: gold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/banner.jpg') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: gold;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ffd700;
+}
+
+/* Main Content Area */
+main {
+    padding: 40px 0;
+}
+
+main h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+main p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* New Arrivals Section */
+.luxecouture {
+    padding: 40px 10px;
+}
+
+.luxecouture h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.luxecouture p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.luxe-couture {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.collection {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.collection:hover {
+    transform: scale(1.05);
+}
+
+.collection img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.collection h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.collection p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background-color: gold;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ffd700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .luxecouture {
+        padding: 20px 10px;
+    }
+
+    .luxe-couture {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collection {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+</style> 
+
 </head>
 <body>
-    <header>
-        <h1>New Arrivals</h1>
-        <div class="container">
-            <div class="logo">
-                <img src="{static'images/mens wear.png' %}"alt="LUXE COUTURE" height="500" width="250">
- <p>Check out the latest additions to our collection.</p>
-    </main>
+  <!-- Top Navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="LUXE COUTURE Logo" />
+        <h1>LUXE COUTURE <span>Elegance Redefined</span></h1>
+      </div>
+
+      <!-- Category Navigation -->
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Kids</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </nav>
+
+      <!-- Icons -->
+      <div class="icons">
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+          <i class="fas fa-search"></i>
+        </div>
+        <a href="#" class="user"><i class="fas fa-user"></i></a>
+        <a href="#" class="cart-icon" id="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Discover the Latest Styles</h2>
+      <p>Check out the latest additions to our collection.</p>
+      <a href="shop.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <main class="container">
+    <section class="luxecouture">
+      <h2>LUXE APPARELS NEW ARRIVALS</h2>
+      <p>We aim to offer pieces that bring grace and sophistication to any occasion.</p>
+
+      <div class="product-grid">
+        <!-- Item 1 -->
+        <div class="category-card">
+          <img src="images/arrival1.jpg" alt="Kids Collection" />
+          <div class="category-info">
+            <h3>Kids Collection</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="category-card">
+          <img src="images/arrival2.jpg" alt="Kids Collection" />
+          <div class="category-info">
+            <h3>Kids Collection</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="category-card">
+          <img src="images/arrival3.jpg" alt="Kids Collection" />
+          <div class="category-info">
+            <h3>Kids Collection</h3>
+            <p>$59.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="category-card">
+          <img src="images/arrival4.jpg" alt="Kids Collection" />
+          <div class="category-info">
+            <h3>Kids Collection</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="category-card">
+          <img src="images/arrival5.jpg" alt="Kids Collection" />
+          <div class="category-info">
+            <h3>Kids Collection</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>We deliver elegance and style with every outfit. Join our fashion journey.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LUXE COUTURE. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

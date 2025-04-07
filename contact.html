@@ -5,6 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - LUXE COUTURE</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .btn:hover {
+          background-color: gold;
+        }
+    
+        .categories, .featured-products, .newsletter, footer {
+          padding: 40px 0;
+        }
+        .categories h2, .featured-products h2, .newsletter h2 {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .category-grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+        }
+        .category-card {
+          background: #fff;
+          border: 1px solid #eee;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+          max-width: 300px;
+          transition: transform 0.3s;
+        }
+        .category-card:hover {
+          transform: scale(1.05);
+        }
+        .category-card img {
+    
+    width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+        .category-info {
+          padding: 15px;
+          text-align: center;
+        }
+        .category-info h3 {
+          margin-bottom: 10px;
+        }
+        .product-filter {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .filter-btn {
+          margin: 0 10px;
+          padding: 8px 15px;
+          border: 1px solid gold;
+          background: none;
+          color: gold;
+          border-radius: 20px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .filter-btn.active,
+        .filter-btn:hover {
+          background: gold;
+          color: white;
+        }
+        .product-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+        }
+    
+        .newsletter-content {
+          text-align: center;
+        }
+        .newsletter-content p {
+          margin: 10px 0 20px;
+        }
+        .newsletter input[type="email"] {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 25px;
+          width: 250px;
+          max-width: 90%;
+        }
+    
+        footer {
+          background: #111;
+          color: #ccc;
+        }
+        .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 30px;
+          padding: 20px 0;
+        }
+        .footer-col h3 {
+          color: white;
+          margin-bottom: 15px;
+        }
+        .footer-col ul {
+          list-style: none;
+        }
+        .footer-col ul li {
+          margin-bottom: 10px;
+        }
+        .footer-col ul li a {
+          color: #ccc;
+          text-decoration: none;
+        }
+        .footer-col ul li a:hover {
+          color: gold;
+        }
+        .social-links a {
+          margin-right: 10px;
+          color: #ccc;
+          font-size: 1.2rem;
+        }
+        .social-links a:hover {
+          color: gold;
+        }
+        .footer-bottom {
+          border-top: 1px solid #444;
+          padding: 15px 0;
+          text-align: center;
+        }
+        .payment-methods i {
+          margin-left: 10px;
+          color: white;
+          font-size: 1.5rem;
+        }
+    
+        .cart-sidebar {
+          display: none;
+        }
+    
+        @media (max-width: 768px) {
+          .category-grid {
+            flex-direction: column;
+            align-items: center;
+          }
+          nav ul {
+            flex-direction: column;
+            text-align: center;
+          }
+          .logo {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .hero {
+            height: 60vh;
+          }
+          .hero-content h2 {
+            font-size: 1.8rem;
+          }
+          .icons {
+            flex-direction: row;
+            justify-content: space-between;
+          }
+        }
+      </style>
 </head>
 <body>
     <header>
@@ -14,9 +172,78 @@
         <p>We'd love to hear from you! Reach out to us via email or phone.</p>
     </main>
     <footer>
-        <p>Email: @luxecouture.com</p>
-        <p>Phone: +1 (254) 796625135</p>
-        <p>Address: 123 Fashion Avenue, Nyali, NY 800101</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LUXE COUTURE</h3>
+                    <p>Your one-stop shop for premium quality clothing and accessories at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Shop</a></li>
+
+<li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 80100 Bamburi Mombasa</li>
+                        <li><i class="fas fa-phone"></i> +254 796625135</li>
+                        <li><i class="fas fa-envelope"></i> info@Luxe couture.com</li>
+                        <li><i class="fas fa-time"></i> Mon-Fri: 9am-6pm</li>
+                        <li><i class= "fas fa-time"></i>Address: 123 Fashion Avenue, Mombasa, Kenya</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; LUXE COUTURE. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added dynamically with JavaScript -->
+        </div>
+        <div class="cart-total">
+            <h4>Total: <span id="cart-total-price">Ksh0.00</span></h4>
+            <a href="#" class="btn checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     </footer>
 </body>
 </html>
