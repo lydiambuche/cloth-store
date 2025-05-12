@@ -208,6 +208,71 @@
     .add-to-cart:hover {
         background-color: #ffd700;
     }
+     /* this is the code I added */
+     .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      gap: 1.5rem; /* spacing between items */
+      padding: 1rem;
+    }
+
+    .category-card {
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+    footer {
+      background: #111;
+      color: #ccc;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+    .footer-col h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .footer-col ul li a:hover {
+      color: gold;
+    }
+    .social-links a {
+      margin-right: 10px;
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+    .social-links a:hover {
+      color: gold;
+    }
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .payment-methods i {
+      margin-left: 10px;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .cart-sidebar {
+      display: none;
+    }
     
     /* Responsive Design */
     @media (max-width: 768px) {
@@ -265,12 +330,12 @@
       <!-- Category Navigation -->
       <nav>
         <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Kids</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Sale</a></li>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="sale.html">Sale</a></li>
         </ul>
       </nav>
 
@@ -307,7 +372,7 @@
       <div class="product-grid">
         <!-- Item 1 -->
         <div class="category-card">
-          <img src="images/arrival1.jpg" alt="Kids Collection" />
+          <img src="images/arrival4.jpg" alt="Kids Collection" />
           <div class="category-info">
             <h3>Kids Collection</h3>
             <p>$49.99</p>
@@ -317,7 +382,7 @@
 
         <!-- Item 2 -->
         <div class="category-card">
-          <img src="images/arrival2.jpg" alt="Kids Collection" />
+          <img src="images/arrival3.jpg" alt="Kids Collection" />
           <div class="category-info">
             <h3>Kids Collection</h3>
             <p>$49.99</p>
@@ -327,7 +392,7 @@
 
         <!-- Item 3 -->
         <div class="category-card">
-          <img src="images/arrival3.jpg" alt="Kids Collection" />
+          <img src="images/arrival7.jpg" alt="Kids Collection" />
           <div class="category-info">
             <h3>Kids Collection</h3>
             <p>$59.99</p>
@@ -354,37 +419,151 @@
             <button class="add-to-cart">Add to Cart</button>
           </div>
         </div>
-      </div>
+
+        <!-- Item 6 -->
+        <div class="category-card">
+          <img src="images/larrival4.jpg" alt="Women Collection" />
+          <div class="category-info">
+            <h3>Women Collection</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="category-card">
+          <img src="images/larrival2.jpg" alt="Women Collection" />
+          <div class="category-info">
+            <h3>Women Collection</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="category-card">
+          <img src="images/larrival5.jpg" alt="Women Collection" />
+          <div class="category-info">
+            <h3>Women Collection</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="category-card">
+          <img src="images/marrival3.jpg" alt="Men Collection" />
+          <div class="category-info">
+            <h3>Men Collection</h3>
+            <p>$99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+         <!-- Item 10 -->
+         <div class="category-card">
+          <img src="images/casual men.jpg" alt="Men Collection" />
+          <div class="category-info">
+            <h3>Men Collection</h3>
+            <p>$99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="category-card">
+          <img src="images/official.jpg" alt="Men Collection" />
+          <div class="category-info">
+            <h3>Men Collection</h3>
+            <p>$99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+
+          <!-- Item 12 -->
+          <div class="category-card">
+            <img src="images/marrival5.jpg" alt="Men Collection" />
+            <div class="category-info">
+              <h3>Men Collection</h3>
+              <p>$99.99</p>
+              <button class="add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+  </div>
     </section>
   </main>
 
 <!-- Footer -->
   <footer>
-    <div class="container footer-grid">
+    <div class="container">
+      <div class="footer-grid">
       <div class="footer-col">
-        <h3>About Us</h3>
-        <p>We deliver elegance and style with every outfit. Join our fashion journey.</p>
-      </div>
-      <div class="footer-col">
+        <h3>LUXE COUTURE</h3>
+                    <p>Your one-stop shop for premium quality clothing and accessories at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
         <h3>Quick Links</h3>
         <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="new-arrivals.html">New Arrivals</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3>Follow Us</h3>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+        <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="contact.html">Contact Us</a></li> <!-- Added Contact Us link -->
+                    </ul>
         </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 LUXE COUTURE. All rights reserved.</p>
-    </div>
-  </footer>
+  <div class="footer-col">
+      <h3>Contact Info</h3>
+      <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 80100 Bamburi Mombasa</li>
+          <li><i class="fas fa-phone"></i> +254 796625135</li>
+          <li><i class="fas fa-envelope"></i> info@Luxe couture.com</li>
+      </ul>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>&copy; 2025 LUXE COUTURE. All Rights Reserved.</p>
+  <div class="payment-methods">
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-amex"></i>
+      <i class="fab fa-cc-paypal"></i>
+  </div>
+</div>
+</div>
+</footer>
+
+<!-- Shopping Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+<div class="cart-header">
+<h3>Your Cart</h3>
+<button class="close-cart" id="close-cart">&times;</button>
+</div>
+<div class="cart-items">
+<!-- Cart items will be added dynamically with JavaScript -->
+</div>
+<div class="cart-total">
+<h4>Total: <span id="cart-total-price">Ksh0.00</span></h4>
+<a href="#" class="btn checkout-btn">Proceed to Checkout</a>
+</div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

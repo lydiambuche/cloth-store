@@ -5,48 +5,261 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - LUXE COUTURE</title>
     <link rel="stylesheet" href="style.css">
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
         body {
-            background-image: url('images/background4.jpg'); 
-            background-size: 100%; 
-            background-repeat: no-repeat; 
-            background-position: center; 
+            background-color: white; /* Optional: set a plain background color */
         }
 
-        p {
-            color: #b8860b; 
+        p { 
+            color: black;
             font-size: 1.0rem; 
             font-family: 'Georgia', serif; 
         }
+        /* Header & Navigation */
+    header {
+        background-color: #f7f7f7;
+        padding: 20px 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    header .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    header .logo img {
+        width: 60px;
+        border-radius: 50%;
+    }
+    
+    header .logo h1 {
+        font-size: 1.8em;
+        color: #333;
+    }
+    
+    header .logo span {
+        color: gold;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        background-color: #111;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: gold;
+    }
+    
+        footer {
+      background: #111;
+      color: #ccc;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 20px 0;
+    }
+    .footer-col h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .footer-col ul li a:hover {
+      color: gold;
+    }
+    .social-links a {
+      margin-right: 10px;
+      color: #ccc;
+      font-size: 1.2rem;
+    }
+    .social-links a:hover {
+      color: gold;
+    }
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .payment-methods i {
+      margin-left: 10px;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .cart-sidebar {
+      display: none;
+    }
     </style>
 </head>
 <body>
-    <header>
+     <!-- Top Navigation -->
+  <nav>
+    <ul>
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="LUXE COUTURE Logo" />
+        <h1>LUXE COUTURE <span>Elegance Redefined</span></h1>
+      </div>
+      <!-- Category Navigation -->
+      <nav>
+        <ul>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+          <li><a href="sale.html">Sale</a></li>
+        </ul>
+      </nav>
+
+      <!-- Icons -->
+      <div class="icons">
+        <div class="search-box">
+          <input type="text" placeholder="Search..." />
+          <i class="fas fa-search"></i>
+        </div>
+        <a href="#" class="user"><i class="fas fa-user"></i></a>
+        <a href="#" class="cart-icon" id="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
         <h1>About Us</h1>
-    </header>
+        <p>We deliver elegance and style with every outfit. Join our fashion journey.</p
+        </header>
     <main>
         <p>At Luxe Couture, we believe fashion should be effortless, inclusive, and uniquely you.</p>
-        <p>Brand story</p>
+        <h2>Brand story</h2>
         Born from a love of classic beauty and the quiet strength of royalty, Luxe Couture was created to redefine modern elegance.
 
 Every garment is designed to celebrate the sophistication within you — the grace in your walk, the confidence in your presence, and the timelessness of your essence.
 
 At Luxe Couture, we don't follow trends — we craft legacies.</p>
-        <p>Mission</p>
+        <h2>Mission</h2>
     <p>At Luxe Couture, our mission is to redefine elegance and sophistication in fashion by crafting garments that embody timeless beauty, impeccable craftsmanship, and a royal flair. We strive to provide our customers with a unique clothing experience that makes them feel empowered, luxurious, and truly special with every piece they wear.
 .</p>
-<P>Core Values</p>
+<h2>Core Values</h2>
 <p>
-    <p> 1.Elegance: Every design at Luxe Couture is inspired by Clean, refined aesthetics in every stitch.</p>
-    <p> 2.Exclusivity: We believe in the art of creating limited-edition collections.</p>
-    <p> 3.Royalty: Designs that exude an aura of majesty, poise, and grandeur.</p>
-    <p> 4.Craftsmanship: We prioritize high-quality fabrics, intricate embroidery, and expert tailoring to deliver exceptional products that meet the highest standards of craftsmanship.</p>
-    <p> 5.Timeless: Our pieces are designed to stay relevant for years, becoming wardrobe staples that remain stylish, elegant, and cherished through generations.</p>
-    <p>6.Sustainability: Luxe Couture is committed to ethical production practices, sourcing materials responsibly and reducing our environmental footprint.</p>
-    </P>
-    <p>Brand voice</p>
+    <p> 1. Elegance: Every design at Luxe Couture is inspired by clean, refined aesthetics in every stitch.</p>
+    <p> 2. Exclusivity: We believe in the art of creating limited-edition collections.</p>
+    <p> 3. Royalty: Designs that exude an aura of majesty, poise, and grandeur.</p>
+    <p> 4. Craftsmanship: We prioritize high-quality fabrics, intricate embroidery, and expert tailoring to deliver exceptional products that meet the highest standards of craftsmanship.</p>
+    <p> 5. Timeless: Our pieces are designed to stay relevant for years, becoming wardrobe staples that remain stylish, elegant, and cherished through generations.</p>
+    <p> 6. Sustainability: Luxe Couture is committed to ethical production practices, sourcing materials responsibly and reducing our environmental footprint.</p>
+    </p>
+    <h2>Brand voice</h2>
     <p>Sophisticated, graceful, and confident — never loud, always commanding presence through subtle power.
 </p>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+          <div class="footer-grid">
+          <div class="footer-col">
+            <h3>LUXE COUTURE</h3>
+                        <p>Your one-stop shop for premium quality clothing and accessories at affordable prices.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="new-arrivals.html">New Arrivals</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Customer Service</h3>
+                        <ul>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Order Tracking</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="contact.html">Contact Us</a></li> <!-- Added Contact Us link -->
+                        </ul>
+            </div>
+      <div class="footer-col">
+          <h3>Contact Info</h3>
+          <ul class="contact-info">
+              <li><i class="fas fa-map-marker-alt"></i> 80100 Bamburi Mombasa</li>
+              <li><i class="fas fa-phone"></i> +254 796625135</li>
+              <li><i class="fas fa-envelope"></i> info@Luxe couture.com</li>
+          </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LUXE COUTURE. All Rights Reserved.</p>
+      <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-paypal"></i>
+      </div>
+    </div>
+    </div>
+    </footer>
+    
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+    <h3>Your Cart</h3>
+    <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items">
+    <!-- Cart items will be added dynamically with JavaScript -->
+    </div>
+    <div class="cart-total">
+    <h4>Total: <span id="cart-total-price">Ksh0.00</span></h4>
+    <a href="#" class="btn checkout-btn">Proceed to Checkout</a>
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
