@@ -75,6 +75,11 @@
       flex-wrap: wrap;
     }
 
+    .logo img {
+      width: 60px;
+      border-radius: 50%;
+    }
+
     .logo {
       display: flex;
       align-items: center;
@@ -82,7 +87,7 @@
     }
 
     .logo h1 {
-      font-size: 1.5rem;
+      font-size: 1.8em;
       color: #222;
     }
 
@@ -333,12 +338,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Men</a></li>
-                    <li><a href="#">Women</a></li>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="#">Sale</a></li>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="accessories.html">Accessories</a></li>
+                    <li><a href="beauty.html">Beauty Essentials</a></li>
                 </ul>
             </nav>
             <div class="icons">
@@ -354,17 +358,7 @@
             </div>
         </div>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>New Arrivals</h2>
-            <p>Check out the latest additions to our collection.</p>
-            <a href="#mens-collection" class="btn">Shop Now</a>
-        </div>
-    </section>
-
-    <!-- Main Content -->
+ <!-- Main Content -->
     <main>
         <section id="mens-collection" class="luxecouture">
             <h2>LUXE APPARELS MEN'S COLLECTION</h2>
@@ -382,7 +376,7 @@
 
                 <!-- Product Card 2 -->
                 <div class="category-card">
-                    <img src="images/marrival4.jpg" alt="Stylish Coat" />
+                    <img src="images/casual men.jpg" alt="casual" />
                     <div class="category-info">
                         <h3>Men Collection</h3>
                         <p>$79.99</p>
@@ -433,37 +427,77 @@
         </section>
     </main>
 
-    <!-- Footer -->
+       <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3>About LUXE</h3>
-                <ul>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">Sustainability</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Customer Service</h3>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="#">Shipping</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+    <div class="container">
+      <div class="footer-grid">
+      <div class="footer-col">
+        <h3>LUXE COUTURE</h3>
+                    <p>Your one-stop shop for premium quality clothing and accessories at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
                 </div>
-            </div>
+                <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="contact.html">Contact Us</a></li> <!-- Added Contact Us link -->
+                    </ul>
         </div>
-        <div class="footer-bottom">
-            &copy; 2025 LUXE COUTURE. All rights reserved.
-        </div>
-    </footer>
+  <div class="footer-col">
+      <h3>Contact Info</h3>
+      <ul class="contact-info">
+          <li><i class="fas fa-map-marker-alt"></i> 80100 Bamburi Mombasa</li>
+          <li><i class="fas fa-phone"></i> +254 796625135</li>
+          <li><i class="fas fa-envelope"></i> info@Luxe couture.com</li>
+      </ul>
+  </div>
+</div>
+<div class="footer-bottom">
+  <p>&copy; 2025 LUXE COUTURE. All Rights Reserved.</p>
+  <div class="payment-methods">
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      <i class="fab fa-cc-amex"></i>
+      <i class="fab fa-cc-paypal"></i>
+  </div>
+</div>
+</div>
+</footer>
+
+<!-- Shopping Cart Sidebar -->
+<div class="cart-sidebar" id="cart-sidebar">
+<div class="cart-header">
+<h3>Your Cart</h3>
+<button class="close-cart" id="close-cart">&times;</button>
+</div>
+<div class="cart-items">
+<!-- Cart items will be added dynamically with JavaScript -->
+</div>
+<div class="cart-total">
+<h4>Total: <span id="cart-total-price">Ksh0.00</span></h4>
+<a href="#" class="btn checkout-btn">Proceed to Checkout</a>
+</div>
+</div>
+
+<script src="script.js"></script> 
 </body>
 </html>
